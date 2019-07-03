@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id = "HelloWorldBeanSb" class = "com.cis.hellospring.HelloSpringBean" lazy-init="true" destroy-method="destroyMessage" scope="singleton">
+      <property name = "message" value = "Hello Indrashis by Spring Bean!"/>
+   </bean>
+   
+   <bean id = "HelloWorldBeanAc" class = "com.cis.hellospring.HelloSpringBean" lazy-init="true" destroy-method="destroyMessage" scope="prototype">
+      <property name = "message" value = "Hello Indrashis by Appl Ctxt!"/>
+   </bean>
+
+</beans>
